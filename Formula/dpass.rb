@@ -5,13 +5,13 @@
 class Dpass < Formula
   desc "CLI toolkit for secret sharing, encryption, mnemonics, and multi-chain key derivation."
   homepage ""
-  version "1.6.2"
+  version "1.6.3"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rbee3u/dpass/releases/download/v1.6.2/dpass_1.6.2_darwin_amd64.tar.gz"
-      sha256 "d6f7c0930ff40872a67d5de291b8dc5c8b2213d93719e0e9a8d519c257b0807a"
+      url "https://github.com/rbee3u/dpass/releases/download/v1.6.3/dpass_1.6.3_darwin_amd64.tar.gz"
+      sha256 "0085b3d1774dd0a718b200f630b2ceac793120db9524c33b0811dd9b534bdba5"
 
       define_method(:install) do
         bin.install "dpass"
@@ -19,8 +19,8 @@ class Dpass < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rbee3u/dpass/releases/download/v1.6.2/dpass_1.6.2_darwin_arm64.tar.gz"
-      sha256 "814c0b6362dac0d1dc33612ea4c1dc6d2ef227a797cb2f9b2cca0c5b7b962be0"
+      url "https://github.com/rbee3u/dpass/releases/download/v1.6.3/dpass_1.6.3_darwin_arm64.tar.gz"
+      sha256 "590f1cefd6e1079d783e56486f7f6e75c5374e1695222bcb3499f789278d267b"
 
       define_method(:install) do
         bin.install "dpass"
@@ -31,16 +31,16 @@ class Dpass < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rbee3u/dpass/releases/download/v1.6.2/dpass_1.6.2_linux_amd64.tar.gz"
-      sha256 "90b6a27d6bf8bd2ed99cdf174cc6f33ace40800e6d6585e53dfeae468625881f"
+      url "https://github.com/rbee3u/dpass/releases/download/v1.6.3/dpass_1.6.3_linux_amd64.tar.gz"
+      sha256 "5155e3919a4dba8fb4b31d6fc9d14415c775b16d95910cbca779a8c2962f3a7e"
       define_method(:install) do
         bin.install "dpass"
         generate_completions_from_executable(bin/"dpass", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rbee3u/dpass/releases/download/v1.6.2/dpass_1.6.2_linux_arm64.tar.gz"
-      sha256 "39a6c56ff46e6e5a86bfe4f43f4476488251cc9801e8d765f65c247ce957639d"
+      url "https://github.com/rbee3u/dpass/releases/download/v1.6.3/dpass_1.6.3_linux_arm64.tar.gz"
+      sha256 "293d2d967acd2981c3433ae84d06a910b99477227e8ed936c96996b8ac8b36f1"
       define_method(:install) do
         bin.install "dpass"
         generate_completions_from_executable(bin/"dpass", "completion")
